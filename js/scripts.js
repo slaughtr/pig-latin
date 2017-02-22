@@ -4,12 +4,13 @@ var pigLatinArray = [];
 function singleVowelCheck(string) {
   var initialArray = string.split(" ");
   initialArray.forEach(function(index) {
-    if (index.length === 1) {
+    if (index.length === 1 || index[0] === "a" || index[0] === "e" || index[0] === "i" || index [0] === "o" || index [0] === "u") {
       index = index + "ay";
       pigLatinArray.push(index);
     } if else {
-        
+
     }
+
   });
   return pigLatinArray;
 }; // closes alphacheck
