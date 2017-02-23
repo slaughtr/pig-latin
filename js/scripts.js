@@ -12,7 +12,6 @@ function singleVowelCheck(string) {
         pigLatinArray.push(index); // take the new string and put it at the end of the pigLatinArray array
 
       } else {
-        console.log(index);
         consonantFunction(index);
         // alert("I'm borked");
       }
@@ -29,13 +28,14 @@ function singleVowelCheck(string) {
 
 function consonantFunction(nonVowelWord) {
   var nonVowelArray = nonVowelWord.split("");
-  nonVowelArray.forEach(function(){
+  console.log(nonVowelArray);
+  nonVowelArray.forEach(function(apples){
 
-      if (this != "a" || this != "e" || this != "i" || this != "o" || this != "u") {
-        var consonantToMove = nonVowelArray.shift();
-        console.log(consonantToMove);
-        nonVowelArray.push(consonantToMove);
-      }
+    if (apples != "a" && apples != "e" && apples != "i" && apples != "o" && apples != "u") {
+      var consonantToMove = nonVowelArray.shift();
+      console.log(consonantToMove);
+      nonVowelArray.push(consonantToMove);
+    }
   });
   var checkedWord = nonVowelArray.join("");
   checkedWord += "ay";
