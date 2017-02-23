@@ -26,15 +26,22 @@ function singleVowelCheck(string) {
   return pigLatinArray; // takes the updated pigLatinArray array and sends it to the front-end logic
 }; // closes singleVowelCheck function
 
+
 function consonantFunction(nonVowelWord) {
   var nonVowelArray = nonVowelWord.split("");
+  var consonantArray = [];
   console.log(nonVowelArray);
-  nonVowelArray.forEach(function(apples){
 
-    if (apples != "a" && apples != "e" && apples != "i" && apples != "o" && apples != "u") {
-      var consonantToMove = nonVowelArray.shift();
-      console.log(consonantToMove);
-      nonVowelArray.push(consonantToMove);
+  nonVowelArray.forEach(function(apples){
+  debugger;
+    if (apples != "i") {
+      // apples != "a" && apples != "e" && apples != "i" && apples != "o" && apples != "u") {
+      // var consonantToMove = nonVowelArray.splice(0,1);
+      // console.log(consonantToMove);
+      // consonantArray.push(consonantToMove);
+    } else if (apples === "a"||"e"||"i"||"o"||"u"){
+      console.log("found a vowel");
+      console.log(consonantArray);
     }
   });
   var checkedWord = nonVowelArray.join("");
